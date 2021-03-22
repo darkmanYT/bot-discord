@@ -1,0 +1,34 @@
+import datetime
+import asyncio
+import discord
+from discord.ext.commands import Bot
+
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged on as', self.user)
+
+    async def on_message(self, message):
+        # don't respond to ourselves
+        if message.author == self.user:
+            return
+
+        if message.content == 'timur':
+            await message.channel.send("timur stuck big dick")
+
+        if message.content == 'Hello bot':
+            await message.channel.send('Hello @everyone')
+
+        if message.content == 'Good bye':
+            await message.channel.send('Good bye @everyone')
+
+        if message.content == 'hello bot':
+            await message.channel.send('Hello @everyone')
+        
+        if message.content == 'good bye':
+            await message.channel.send("Good bye @everyone")
+
+        if message.content == '!bot info':
+            await message.channel.send("Bot info:\nBot Name:Darkman.bot.\nBot Creator: TheDarkman.")
+
+client = MyClient()
+client.run('ODIzMTczNzM0Mjg1OTY3Mzcw.YFc-SA.eruDqK7-aaHPOD0y75mTgRmkxFM')
