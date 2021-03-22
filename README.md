@@ -1,2 +1,1 @@
-# bot-discord
-test bot for dc
+if you ned this bot change bot token
